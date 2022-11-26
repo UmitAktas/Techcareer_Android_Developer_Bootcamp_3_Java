@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sign Up Odev</string>
+    <string name="singUpBaslik">Sign Up</string>
+    <string name="altBaslik">Sign up to create your account</string>
+    <string name="name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="number">Phone Number</string>
+    <string name="pass">Password</string>
+    <string name="signUpButton">SIGN UP</string>
+    <string name="already">Already have an account?</string>
+    <string name="logIn">Log in</string>
+</resources>

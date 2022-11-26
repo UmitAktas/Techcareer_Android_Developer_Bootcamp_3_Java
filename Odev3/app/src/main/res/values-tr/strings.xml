@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sign Up Odev</string>
+    <string name="singUpBaslik">Kayıt Ol</string>
+    <string name="altBaslik">Hesabınızı oluşturmak için kaydolun</string>
+    <string name="name">Ad-Soyad</string>
+    <string name="email">E-posta</string>
+    <string name="number">Telefon numarası</string>
+    <string name="pass">Şifre</string>
+    <string name="signUpButton">KAYIT OL</string>
+    <string name="already">Hesabınız var mı?</string>
+    <string name="logIn">Giriş yap</string>
+</resources>
