@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LOG IN APP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logIn">GİRİŞ YAP</string>
+    <string name="signUp">KAYIT OL</string>
+    <string name="welcome">HOŞ GELDİNİZ</string>
+    <string name="adSoyad">AD SOYAD</string>
+    <string name="eposta">EPOSTA</string>
+    <string name="telefon">TELEFON NUMARASI</string>
+    <string name="password">ŞİFRE</string>
+    <string name="basarili">BAŞARIYLA TAMAMLANDI</string>
+    <string name="uygulamayaHG">Uygulamaya Hoş Geldiniz</string>
+    <string name="logOut">ÇIKIŞ YAP</string>
+</resources>

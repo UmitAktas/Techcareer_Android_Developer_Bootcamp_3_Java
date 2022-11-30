@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.odev4.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/kayitOlaGecis"
+            app:destination="@id/kayitOlFragment" />
+        <action
+            android:id="@+id/girisYapaGecis"
+            app:destination="@id/girisYapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitOlFragment"
+        android:name="com.example.odev4.KayitOlFragment"
+        android:label="fragment_kayit_ol"
+        tools:layout="@layout/fragment_kayit_ol" >
+        <action
+            android:id="@+id/kayitGiriseGecis"
+            app:destination="@id/kayitGirisFragment"
+            app:popUpTo="@id/kayitOlFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitGirisFragment"
+        android:name="com.example.odev4.KayitGirisFragment"
+        android:label="fragment_kayit_giris"
+        tools:layout="@layout/fragment_kayit_giris" >
+        <action
+            android:id="@+id/kayittanUygulamaIcineGecis"
+            app:destination="@id/uygulamaIciFragment"
+            app:popUpTo="@id/kayitGirisFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/girisYapFragment"
+        android:name="com.example.odev4.GirisYapFragment"
+        android:label="fragment_giris_yap"
+        tools:layout="@layout/fragment_giris_yap" >
+        <action
+            android:id="@+id/giristenUygulamaIcineGecis"
+            app:destination="@id/uygulamaIciFragment"
+            app:popUpTo="@id/girisYapFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/uygulamaIciFragment"
+        android:name="com.example.odev4.UygulamaIciFragment"
+        android:label="fragment_uygulama_ici"
+        tools:layout="@layout/fragment_uygulama_ici" >
+        <action
+            android:id="@+id/uygulamadanAnasayfaDon"
+            app:destination="@id/anasayfaFragment"
+            app:popUpTo="@id/uygulamaIciFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
