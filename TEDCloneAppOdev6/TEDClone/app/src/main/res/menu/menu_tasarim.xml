@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/anasayfaFragment"
+        android:icon="@drawable/home_resim" />
+    <item
+        android:id="@+id/podcastFragment"
+        android:icon="@drawable/headphone_resim" />
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/search_resim" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/person_resim" />
+</menu>
