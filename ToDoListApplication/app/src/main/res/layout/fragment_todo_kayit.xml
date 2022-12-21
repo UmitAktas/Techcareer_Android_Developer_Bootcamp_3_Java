@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="todoKayitToolbarBaslik"
+            type="String" />
+        <variable
+            name="todoKayitFragment"
+            type="com.example.todolistapplication.ui.fragment.TodoKayitFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/arkaPlan"
+        tools:context=".ui.fragment.TodoKayitFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTodoKayit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/acikRenk"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{todoKayitToolbarBaslik}" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarTodoKayit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Yapılacak İş" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonKaydet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="100dp"
+            android:onClick="@{() -> todoKayitFragment.kaydet(editTextTodo.getText().toString())}"
+            android:text="KAYDET"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <TextView
+            android:id="@+id/textViewİsKayit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="YAPILACAK İŞİN KAYDI"
+            android:textColor="@color/yaziRengi1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarTodoKayit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

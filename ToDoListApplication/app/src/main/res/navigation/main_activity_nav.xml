@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.todolistapplication.ui.fragment.AnasayfaFragment"
+        android:label="AnasayfaFragment" >
+        <action
+            android:id="@+id/todoDetayGecis"
+            app:destination="@id/todoDetayFragment" />
+        <action
+            android:id="@+id/todoKayitGecis"
+            app:destination="@id/todoKayitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoDetayFragment"
+        android:name="com.example.todolistapplication.ui.fragment.TodoDetayFragment"
+        android:label="TodoDetayFragment" >
+        <argument
+            android:name="todo"
+            app:argType="com.example.todolistapplication.data.entity.Todolar" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoKayitFragment"
+        android:name="com.example.todolistapplication.ui.fragment.TodoKayitFragment"
+        android:label="TodoKayitFragment" />
+</navigation>
