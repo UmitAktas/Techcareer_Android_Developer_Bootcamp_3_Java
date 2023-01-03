@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/yemeklerFragment">
+
+    <fragment
+        android:id="@+id/yemeklerFragment"
+        android:name="com.example.doydoy.ui.fragment.YemeklerFragment"
+        android:label="fragment_yemekler"
+        tools:layout="@layout/fragment_yemekler" >
+        <action
+            android:id="@+id/yemekDetayaGecis"
+            app:destination="@id/yemekDetayFragment" />
+        <action
+            android:id="@+id/anasayfadanSepetFragmentaGecis"
+            app:destination="@id/sepetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekDetayFragment"
+        android:name="com.example.doydoy.ui.fragment.YemekDetayFragment"
+        android:label="fragment_yemek_detay"
+        tools:layout="@layout/fragment_yemek_detay" >
+        <argument
+            android:name="yemek"
+            app:argType="com.example.doydoy.data.entity.Yemekler" />
+        <action
+            android:id="@+id/sepetFragmentaGecis"
+            app:destination="@id/sepetFragment"
+            app:popUpTo="@id/yemekDetayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.doydoy.ui.fragment.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <argument
+            android:name="sepetYemek"
+            app:argType="com.example.doydoy.data.entity.SepetYemekler" />
+    </fragment>
+</navigation>
